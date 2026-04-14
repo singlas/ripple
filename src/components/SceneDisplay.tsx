@@ -11,7 +11,7 @@ export default function SceneDisplay({ text, image }: SceneDisplayProps) {
   return (
     <div>
       {image && (
-        <div className="relative w-full aspect-[4/3] -mx-4 mb-4" style={{ width: "calc(100% + 2rem)" }}>
+        <div className="relative w-full aspect-[16/10] -mx-4 mb-4" style={{ width: "calc(100% + 2rem)" }}>
           <Image
             src={image}
             alt=""

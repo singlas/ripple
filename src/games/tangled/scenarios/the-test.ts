@@ -10,6 +10,7 @@ const theTest: Scenario = {
     // ── Round 1: The moment ──
     "tt-1": {
       id: "tt-1",
+      image: "/images/tangled/chain4/01_answer_sheet.png",
       prompt:
         "The answer sheet is right there on the desk. Tomorrow's Hindi test. Every answer, printed clearly. Your heart beats faster. Nobody is watching.",
       choices: [
@@ -62,6 +63,7 @@ const theTest: Scenario = {
     // Round 3 (clean): During the test
     "tt-clean-3": {
       id: "tt-clean-3",
+      image: "/images/tangled/chain4/04_during_test.png",
       prompt:
         "Halfway through the test, you get stuck on question 7. Sam is sitting next to you. He shifts his paper so you can see his answer. Priya Ma'am is looking the other way.",
       choices: [
@@ -112,6 +114,7 @@ const theTest: Scenario = {
     // Round 5 (clean): Priya Ma'am talks
     "tt-clean-5": {
       id: "tt-clean-5",
+      image: "/images/tangled/chain4/05_results.png",
       prompt:
         "Priya Ma'am hands back the tests. You got a B-minus. Not great, but honest. She pauses at your desk. \u201cSolid effort, Alex. I can tell you studied.\u201d",
       choices: [
@@ -137,6 +140,7 @@ const theTest: Scenario = {
     // Round 6 (clean): Reflection
     "tt-clean-6": {
       id: "tt-clean-6",
+      image: "/images/tangled/chain4/06_walking_home.png",
       prompt:
         "After school, Sam says, \u201cHey, did you really see the answers on Ma'am's desk?\u201d You nod. He stares. \u201cAnd you just... walked away?\u201d",
       choices: [
@@ -164,6 +168,7 @@ const theTest: Scenario = {
     // Round 2 (look): How much do you look?
     "tt-look-2": {
       id: "tt-look-2",
+      image: "/images/tangled/chain4/03_phone_photo.png",
       prompt:
         "You're standing over the desk. The answers are right there. Your hands are shaking a little.",
       choices: [
@@ -552,6 +557,7 @@ const theTest: Scenario = {
     // Round 5 (photo, kept): Alone with it
     "tt-photo-kept-5": {
       id: "tt-photo-kept-5",
+      image: "/images/tangled/chain4/05_results.png",
       prompt:
         "You ace the test. Priya Ma'am raises an eyebrow when she hands it back. \u201cImpressive score, Alex. You must have studied hard.\u201d Something in her voice sounds like a question.",
       choices: [

@@ -10,6 +10,7 @@ const groupProject: Scenario = {
     // ── Round 1: Presenting the project ──
     "gp-1": {
       id: "gp-1",
+      image: "/images/tangled/chain2/01_presenting.png",
       prompt:
         "You're standing at the front of the class. Priya Ma'am nods for you to begin. Kabir's notes are in your hands. Riya and Sam are watching from your table.",
       choices: [
@@ -38,6 +39,7 @@ const groupProject: Scenario = {
     // Round 2 (credit): Kabir reacts
     "gp-credit-2": {
       id: "gp-credit-2",
+      image: "/images/tangled/chain2/02_kabir_smiles.png",
       prompt:
         "After the presentation, Kabir walks up to you. He's smiling, which is rare. \u201cThanks for saying that. Nobody ever does.\u201d Riya gives you a thumbs up from across the room.",
       choices: [
@@ -218,6 +220,7 @@ const groupProject: Scenario = {
     // Round 4 (vague, fix): Talk to Kabir
     "gp-vague-fix-4": {
       id: "gp-vague-fix-4",
+      image: "/images/tangled/chain2/04_teacher_asks.png",
       prompt:
         "You catch up to Kabir in the hallway. He stops, clutching his backpack straps. He looks like he's waiting for bad news.",
       choices: [
@@ -370,6 +373,7 @@ const groupProject: Scenario = {
     // Round 3 (steal): Kabir is hurt
     "gp-steal-3": {
       id: "gp-steal-3",
+      image: "/images/tangled/chain2/03_kabir_hurt.png",
       prompt:
         "Kabir looks hurt. After class, Priya Ma'am asks Alex to stay behind. \u201cI want to know who did what on this project. Be honest with me.\u201d",
       choices: [
@@ -446,6 +450,7 @@ const groupProject: Scenario = {
     // Round 6 (steal, recover): Reflection
     "gp-steal-recover-6": {
       id: "gp-steal-recover-6",
+      image: "/images/tangled/chain2/06_kabir_note.png",
       prompt:
         "End of the week. Kabir is packing up. He stops by your desk and leaves a folded piece of paper. Inside it says: \u201cThanks for fixing it. \u2014 K\u201d",
       choices: [
@@ -471,6 +476,7 @@ const groupProject: Scenario = {
     // Round 4 (steal, doubled down): Kabir withdraws
     "gp-steal-down-4": {
       id: "gp-steal-down-4",
+      image: "/images/tangled/chain2/05_kabir_alone.png",
       prompt:
         "The next day, Kabir doesn't talk to anyone. At lunch, he sits alone at the far corner. Riya says, \u201cAlex, everyone knows Kabir did the work. You're only fooling yourself.\u201d",
       choices: [

@@ -162,7 +162,7 @@ export default function Home() {
             {/* Title screen */}
             {phase === "title" && (
               <div className="space-y-6">
-                <div className="relative w-full aspect-[4/3] -mx-4" style={{ width: "calc(100% + 2rem)" }}>
+                <div className="relative w-full aspect-[16/10] -mx-4" style={{ width: "calc(100% + 2rem)" }}>
                   <Image
                     src="/images/tangled/title.png"
                     alt=""
@@ -208,7 +208,14 @@ export default function Home() {
                 </div>
                 <SceneDisplay
                   text={currentChain.setup}
-                  image={currentChain.id === "broken-phone" ? "/images/tangled/chain1_setup.png" : undefined}
+                  image={
+                    {
+                      "broken-phone": "/images/tangled/chain1_setup.png",
+                      "group-project": "/images/tangled/chain2/chain2_setup.png",
+                      "the-secret": "/images/tangled/chain3/chain3_setup.png",
+                      "the-test": "/images/tangled/chain4/chain4_setup.png",
+                    }[currentChain.id]
+                  }
                 />
                 <button
                   onClick={beginPlaying}

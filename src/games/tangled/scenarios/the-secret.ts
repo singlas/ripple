@@ -10,6 +10,7 @@ const theSecret: Scenario = {
     // ── Round 1: Sam asks what's wrong with Riya ──
     "ts-1": {
       id: "ts-1",
+      image: "/images/tangled/chain3/01_sam_asks.png",
       prompt:
         "Sam slides his tray next to yours. Riya isn't at the table yet. Sam says, \u201cWhat's wrong with Riya? She's been super quiet all day.\u201d",
       choices: [
@@ -38,6 +39,7 @@ const theSecret: Scenario = {
     // Round 2 (kept): Sam pushes
     "ts-kept-2": {
       id: "ts-kept-2",
+      image: "/images/tangled/chain3/02_keeping_secret.png",
       prompt:
         "Sam frowns. \u201cCome on, we're all friends. If something's wrong, I should know too. Is it something at home?\u201d He's not being mean \u2014 he's worried.",
       choices: [
@@ -63,6 +65,7 @@ const theSecret: Scenario = {
     // Round 3 (kept): Riya arrives
     "ts-kept-3": {
       id: "ts-kept-3",
+      image: "/images/tangled/chain3/03_riya_arrives.png",
       prompt:
         "Riya sits down. Her eyes are a little red. Sam looks at her, then at you. He's clearly trying not to ask. Riya says quietly, \u201cDid you... tell anyone?\u201d",
       choices: [
@@ -371,6 +374,7 @@ const theSecret: Scenario = {
     // Round 3 (spill): It spreads
     "ts-spill-3": {
       id: "ts-spill-3",
+      image: "/images/tangled/chain3/04_secret_spreads.png",
       prompt:
         "You told Sam to keep it quiet. But by last period, two other kids have mentioned it. Riya walks up to you, eyes red. \u201cYou told people? You PROMISED.\u201d",
       choices: [
@@ -421,6 +425,7 @@ const theSecret: Scenario = {
     // Round 5 (spill, owned up): Try to fix it
     "ts-spill-own-5": {
       id: "ts-spill-own-5",
+      image: "/images/tangled/chain3/06_bench_alone.png",
       prompt:
         "You find Riya after school. She's sitting on the bench outside, alone. She sees you and looks away.",
       choices: [
@@ -471,6 +476,7 @@ const theSecret: Scenario = {
     // Round 4 (spill, blame Sam): Riya pushes back
     "ts-spill-blame-4": {
       id: "ts-spill-blame-4",
+      image: "/images/tangled/chain3/05_riya_confronts.png",
       prompt:
         "Riya's voice cracks. \u201cI trusted you. You were the only person I told.\u201d Sam is standing behind you. He heard everything. He says quietly, \u201cI didn't know it was a secret, Alex. You just told me.\u201d",
       choices: [
