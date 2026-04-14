@@ -4,17 +4,20 @@
 
 ## What's built
 
-- Game concept document (`the-ripple-game-concept.md`) — series overview, shared mechanics, Game 1 (Tangled) fully written with all 4 scenario chains and all branches
-- Technical architecture spec — repository structure, scenario data format, engine rules
-- Static site scaffolding (Next.js + Tailwind, deployed on Vercel)
+- Game concept document — series overview, shared mechanics, Game 1 (Tangled) fully written with all 4 scenario chains and all branches
+- Shared engine — state management (meter, journal, flags, compounding, end states), scene rendering, choice logic (57 tests passing)
+- Game 1: Tangled — all 4 chains playable (The Broken Phone, The Group Project, The Secret, The Test)
+- Mobile-first UI with phone mockup frame, trust meter, choice buttons, chain interstitials, end screen with journal
+- Watercolor storybook illustrations (Gemini Flash) — title screen, chapter setup, and key scene art for Chain 1
+- Deployed on Vercel (Next.js + TypeScript + Tailwind CSS)
 
 ---
 
 ## Next steps
 
-1. **Shared engine.** State management (meter, journal, flags), scene rendering, choice logic, journal tracking, end state calculation. This is the foundation everything else runs on.
-2. **Game 1: Tangled.** Implement all 4 scenario chains from the concept doc. First playable game.
-3. **Playtest with kids.** Test with a few 8-12 year olds. Iterate on wording, difficulty, and meter balance.
+1. **Playtest with kids.** Test with a few 8-12 year olds. Iterate on wording, difficulty, and meter balance.
+2. **Expand artwork.** Generate scene illustrations for remaining chains (2-4) and end screen art.
+3. **Home screen.** Game selection, journal review, replay prompt.
 4. **Game 2 writing.** Begin scenario writing for The Invisible Thread (Gratitude).
 
 ---
@@ -33,8 +36,8 @@
 
 ### What has to exist at launch
 
-- Shared engine — fully functional meter, journal, flags, end states
-- Game 1: Tangled — all 4 chains playable
+- ~~Shared engine — fully functional meter, journal, flags, end states~~ Done
+- ~~Game 1: Tangled — all 4 chains playable~~ Done
 - Home screen — game selection, journal review, replay prompt
 
 ### Launch trigger
@@ -49,8 +52,8 @@ Not a feature checklist. The bar is: *"if I showed this to the friend most likel
 - Game 3: The Loud Silence (Courage)
 - Cross-game character appearances (Riya shows up in a Courage scenario, reinforcing the shared world)
 - Sound design — ambient sounds (school bell, playground, classroom hum) and choice feedback (soft chime for good, muted thud for bad)
-- Illustrations — warm, slightly stylized, picture book for older kids
+- ~~Illustrations — warm, slightly stylized, picture book for older kids~~ Started (Chain 1 complete)
 
 ---
 
-*Status: Concept document complete. Tangled fully written. Engine not yet built.*
+*Status: Engine built and tested. Game 1 fully playable with watercolor illustrations. Deployed on Vercel.*

@@ -10,6 +10,7 @@ const brokenPhone: Scenario = {
     // ── Round 1: The moment it happens ──
     "bp-1": {
       id: "bp-1",
+      image: "/images/tangled/chain1/01_lunch_table_accident.png",
       prompt:
         "Riya picks up her phone. The screen is cracked. She looks at you.",
       choices: [
@@ -38,6 +39,7 @@ const brokenPhone: Scenario = {
     // Round 2 (honest): Riya responds
     "bp-honest-2": {
       id: "bp-honest-2",
+      image: "/images/tangled/chain1/02_honest_apology.png",
       prompt:
         "Riya looks surprised, then smiles a little. \u201cThanks for being honest. Accidents happen.\u201d Sam nods. \u201cThat's cool of you, Alex.\u201d Priya Ma'am overhears and gives you an approving look.",
       choices: [
@@ -138,6 +140,7 @@ const brokenPhone: Scenario = {
     // Round 6 (honest): Reflection
     "bp-honest-6": {
       id: "bp-honest-6",
+      image: "/images/tangled/chain1/09_late_honesty.png",
       prompt:
         "It's Friday. Riya's phone is fixed. At lunch, she sits next to you and says, \u201cYou know what? Most people would have made excuses. You didn't.\u201d She grins. \u201cYou're a good friend, Alex.\u201d",
       choices: [
@@ -165,6 +168,7 @@ const brokenPhone: Scenario = {
     // Round 2 (deny): What kind of denial?
     "bp-deny-2": {
       id: "bp-deny-2",
+      image: "/images/tangled/chain1/03_blame_sam.png",
       prompt:
         "Riya is looking at her cracked screen. Sam glances between you and the phone. You need to say something.",
       choices: [
@@ -193,6 +197,7 @@ const brokenPhone: Scenario = {
     // Round 3 (deflect): Riya pushes back
     "bp-deflect-3": {
       id: "bp-deflect-3",
+      image: "/images/tangled/chain1/05_doubling_down.png",
       prompt:
         "Riya frowns. \u201cIt wasn't on the edge, Alex. I put it right in the middle.\u201d Sam looks at you, then at Riya. The table is quiet.",
       choices: [
@@ -294,6 +299,7 @@ const brokenPhone: Scenario = {
     // Round 4 (deflect, doubled down): Consequence
     "bp-deflect-down-4": {
       id: "bp-deflect-down-4",
+      image: "/images/tangled/chain1/07_gossip_escalation.png",
       prompt:
         "Riya shakes her head and puts her phone away. She doesn't talk to you for the rest of lunch. Sam eats quietly. After school, you see Riya telling another friend what happened.",
       choices: [
@@ -372,6 +378,7 @@ const brokenPhone: Scenario = {
     // Round 3 (blame): Sam denies it
     "bp-blame-3": {
       id: "bp-blame-3",
+      image: "/images/tangled/chain1/04_teacher_confrontation.png",
       prompt:
         "Sam's eyes go wide. \u201cWhat? I wasn't even near the table!\u201d He looks hurt and confused. Priya Ma'am walks over and looks at you.",
       choices: [
@@ -473,6 +480,7 @@ const brokenPhone: Scenario = {
     // Round 4 (blame, doubled down): Sam upset, others saw
     "bp-blame-down-4": {
       id: "bp-blame-down-4",
+      image: "/images/tangled/chain1/06_recess_apology.png",
       prompt:
         "It's recess. Sam is sitting alone by the wall. Riya is with her other friends, looking confused. A couple of kids who were at the table are whispering.",
       choices: [
@@ -549,6 +557,7 @@ const brokenPhone: Scenario = {
     // Round 5 (blame, doubled down, escalated): Riya confronts
     "bp-blame-down-escalate-5": {
       id: "bp-blame-down-escalate-5",
+      image: "/images/tangled/chain1/08_riya_confronts.png",
       prompt:
         "Riya walks up to you after class. Her voice is steady but her eyes are hurt. \u201cI know you broke my phone. Everyone saw it. Why did you lie?\u201d",
       choices: [
@@ -575,6 +584,7 @@ const brokenPhone: Scenario = {
     // Round 6 (blame, escalated): End of the week
     "bp-blame-down-escalate-6": {
       id: "bp-blame-down-escalate-6",
+      image: "/images/tangled/chain1/10_bridge_burned.png",
       prompt:
         "It's the last day of the week. Alex sits in class, looking around. Sam is across the room. Riya is with her other friends. Priya Ma'am is handing back assignments.",
       choices: [

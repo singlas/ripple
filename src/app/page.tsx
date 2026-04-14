@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import Image from "next/image";
 import { GameState, Choice, Scenario } from "@/engine/types";
 import { createInitialState, applyChoice, advanceChain } from "@/engine/state";
 import { loadRound } from "@/engine/scene";
@@ -124,7 +125,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
       {/* Phone frame - visible on wider screens */}
       <div
-        className="w-full max-w-[390px] min-h-[700px] bg-gray-50 rounded-none shadow-none border-0
+        className="w-full max-w-[390px] h-[700px] bg-gray-50 rounded-none shadow-none border-0
                     sm:rounded-[2.5rem] sm:shadow-2xl sm:border-[8px] sm:border-gray-800
                     overflow-hidden relative sm:my-8"
       >
@@ -134,7 +135,7 @@ export default function Home() {
                       w-[120px] h-[25px] bg-gray-800 rounded-b-2xl z-10"
         />
         {/* Game content */}
-        <div className="min-h-[700px] flex flex-col px-4 py-6 sm:pt-10">
+        <div className="h-full flex flex-col px-4 py-6 sm:pt-10 overflow-y-auto">
           {/* Header */}
           <header className="text-center mb-4">
             <h1 className="text-sm font-semibold text-indigo-600 tracking-wide uppercase">
@@ -160,8 +161,17 @@ export default function Home() {
           <div className="flex-1 flex flex-col justify-center gap-6">
             {/* Title screen */}
             {phase === "title" && (
-              <div className="text-center space-y-6">
-                <div>
+              <div className="space-y-6">
+                <div className="relative w-full aspect-[4/3] -mx-4" style={{ width: "calc(100% + 2rem)" }}>
+                  <Image
+                    src="/images/tangled/title.png"
+                    alt=""
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                <div className="text-center">
                   <h2 className="text-3xl font-bold text-gray-800 mb-2">
                     Tangled
                   </h2>
@@ -169,14 +179,14 @@ export default function Home() {
                     &ldquo;The truth is simple. Lies get tangled.&rdquo;
                   </p>
                 </div>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-center">
                   You are Alex, a 10-year-old at school. Every choice you make
                   creates ripples. Some build trust. Some break it. And some
                   things, once broken, can&apos;t be fixed.
                 </p>
                 <button
                   onClick={startGame}
-                  className="px-8 py-4 bg-indigo-600 text-white rounded-xl font-medium text-lg
+                  className="w-full px-8 py-4 bg-indigo-600 text-white rounded-xl font-medium text-lg
                              hover:bg-indigo-700 active:scale-[0.98] transition-all duration-150
                              focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
                 >
@@ -196,7 +206,10 @@ export default function Home() {
                     {currentChain.title}
                   </h2>
                 </div>
-                <SceneDisplay text={currentChain.setup} />
+                <SceneDisplay
+                  text={currentChain.setup}
+                  image={currentChain.id === "broken-phone" ? "/images/tangled/chain1_setup.png" : undefined}
+                />
                 <button
                   onClick={beginPlaying}
                   className="w-full px-6 py-4 bg-indigo-600 text-white rounded-xl font-medium
@@ -211,7 +224,7 @@ export default function Home() {
             {/* Playing */}
             {phase === "playing" && currentRound && (
               <div className="space-y-6">
-                <SceneDisplay text={currentRound.prompt} />
+                <SceneDisplay text={currentRound.prompt} image={currentRound.image} />
                 <ChoiceButtons
                   choices={currentRound.choices}
                   onChoose={handleChoice}

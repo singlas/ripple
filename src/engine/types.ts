@@ -10,6 +10,7 @@ export type Choice = {
 export type Round = {
   id: string;
   prompt: string;
+  image?: string; // path to scene illustration (relative to /images/)
   choices: [Choice, Choice]; // always exactly 2 (binary)
   condition?: { flag: string; value: boolean }; // optional flag gate
 };
