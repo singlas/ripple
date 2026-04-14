@@ -1,34 +1,36 @@
-import { EndState } from "./types";
+import { EndState, GameConfig } from "./types";
 
-export function getEnding(trustMeter: number): EndState {
-  if (trustMeter >= 40) {
+export function getEnding(meter: number, config: GameConfig): EndState {
+  const [excellent, good, rocky] = config.thresholds;
+
+  if (meter >= excellent) {
     return {
-      title: "Honest Friend",
+      title: "Trusted Friend",
       message:
-        "You told the truth, even when it was hard. Riya knows she can count on you.",
+        "Trust is built one honest moment at a time. You built something real.",
       tier: "excellent",
     };
   }
-  if (trustMeter >= 25) {
+  if (meter >= good) {
     return {
-      title: "Work in Progress",
+      title: "Learning & Growing",
       message:
-        "Things got messy, but you\u2019re finding your way back. Trust takes time.",
+        "Nobody\u2019s perfect. What matters is that when you stumbled, you chose to get back up. That takes courage too.",
       tier: "good",
     };
   }
-  if (trustMeter >= 15) {
+  if (meter >= rocky) {
     return {
       title: "Thin Ice",
       message:
-        "Riya isn\u2019t sure what to believe anymore. The rope is thin \u2014 but it\u2019s still there.",
+        "Trust is like a rope \u2014 every lie cuts a thread. There\u2019s still rope left, but it\u2019s thin. What will you do tomorrow?",
       tier: "rocky",
     };
   }
   return {
     title: "Tangled Up",
     message:
-      "Riya doesn\u2019t want to talk to you anymore. Some things, once broken, stay broken. But every day is a new chance to be honest.",
+      "When you lie, you don\u2019t just fool others \u2014 you lose yourself in the tangle. But here\u2019s the thing: you can always start telling the truth again. It\u2019s never too late for the first honest word.",
     tier: "broken",
   };
 }

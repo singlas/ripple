@@ -1,42 +1,30 @@
 # TODOS
 
-## P1 — High Priority
+## P0 — Engine rebuild with design pivot (DONE)
 
-### Add all 4 Tangled chains
-- **What:** Transcribe Group Project, The Secret, and The Test scenario data files from the concept doc
-- **Why:** Tests the full Tangled experience with cross-chain meter carry — 4x testing signal
-- **Effort:** M (human ~1 day / CC ~20 min)
-- **Depends on:** Base POC working
-- **Context:** Concept doc has all 4 chains fully written. This is pure data entry into the scenario schema. May also want cross-chain flags (engine addition) to unlock conditional dialogue based on prior chains.
+- [x] Binary-choice Reigns-style interaction (always 2 choices per round)
+- [x] Longer chains (6 rounds per playthrough), all 4 chains of Tangled
+- [x] Chain sequencing (play chains 1-4 in order, ending after chain 4)
+- [x] Generic `meter` field, config-driven thresholds (80/50/30)
+- [x] Compounding multiplier (1x → 2.5x cap)
+- [x] Flags (cross-chain consequences)
+- [x] Journal entries stored in state, displayed on end screen
+- [x] Mid-game isBroken visual signal (crack overlay, "Broken" label)
+- [x] Phone frame mockup for desktop
+- [x] Chain interstitial between scenarios
 
-## P2 — Medium Priority
+## P1 — Tests (DONE)
 
-### "What if?" teaser on end screen
-- **What:** After the ending, show one line: "What if you had chosen differently at [key moment]?" to drive replay
-- **Why:** Transforms "I should try again" into "I NEED to know what would have happened"
-- **Effort:** S (human ~2h / CC ~10 min)
-- **Depends on:** Base POC
-- **Context:** Requires tracking which choice had the largest meter impact. Show that choice's alternative path teaser.
+- [x] Vitest setup with @/ alias config
+- [x] Unit tests: state (23), scene (2), endings (7), scenario validation (25)
+- [x] 57 total tests, all passing
 
-### Shareable story link
-- **What:** Encode player's choice sequence in URL params. Add a /story/[path] page that renders the story summary
-- **Why:** Creates viral testing loop — kid shares link, friend wants to play and make different choices
-- **Effort:** S (human ~3h / CC ~15 min)
-- **Depends on:** Base POC
-- **Context:** For 1 chain (4 rounds), the choice sequence is short enough for URL params. For 4 chains, may need a hash/encoding scheme.
+## P2 — Enhanced end screen
 
-## P3 — Nice to Have
+- [ ] "What if?" teaser (largest meter-impact choice shown with alternative)
 
-### Mood shift (background color)
-- **What:** Background color subtly transitions from warm (golden/amber) to cool (blue-gray) as trust drops
-- **Why:** Makes the gut punch land harder through atmosphere, no visual assets needed
-- **Effort:** S (human ~2h / CC ~5 min)
-- **Depends on:** Base POC
-- **Context:** Tailwind class swap based on meter tier. Needs taste — wrong colors feel cheesy.
+## P3 — Polish (deferred)
 
-### Story timeline visualization
-- **What:** After game ends, show a visual branching tree with the player's path highlighted and roads not taken grayed out
-- **Why:** Makes "The Ripple" thesis visible — every choice created branches you can literally see
-- **Effort:** M (human ~2 days / CC ~30 min)
-- **Depends on:** Base POC
-- **Context:** SVG or CSS-based tree rendering. Fiddly on mobile. Most iconic potential feature but also most complex.
+- [ ] Mood shift (background warm → cold as meter drops)
+- [ ] Shareable story link (choice sequence in URL params)
+- [ ] Story timeline visualization (branching tree with player's path highlighted)

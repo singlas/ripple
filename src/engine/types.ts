@@ -3,13 +3,15 @@ export type Choice = {
   text: string;
   meterChange: number;
   journal?: string;
-  next: string; // round ID, or "end" to trigger ending screen
+  flags?: Record<string, boolean>;
+  next: string; // round ID, or "end" to finish the chain
 };
 
 export type Round = {
   id: string;
   prompt: string;
-  choices: Choice[];
+  choices: [Choice, Choice]; // always exactly 2 (binary)
+  condition?: { flag: string; value: boolean }; // optional flag gate
 };
 
 export type Scenario = {
@@ -24,6 +26,7 @@ export type GameConfig = {
   meterName: string;
   meterStart: number;
   themeColor: string;
+  thresholds: [number, number, number]; // [excellent, good, rocky] — below rocky is broken
 };
 
 export type EndState = {
@@ -33,9 +36,13 @@ export type EndState = {
 };
 
 export type GameState = {
-  trustMeter: number;
+  meter: number;
   currentRoundId: string | null;
+  currentChainIndex: number;
   isEnded: boolean;
   isBroken: boolean;
   choiceHistory: string[];
+  journalEntries: string[];
+  flags: Record<string, boolean>;
+  badStreak: number;
 };
