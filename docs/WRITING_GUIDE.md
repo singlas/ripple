@@ -138,6 +138,46 @@ Write chains 2-4. After each chain, verify:
 
 ---
 
+## Planned repository structure
+
+```
+the-ripple/
+├── README.md
+├── engine/                    # Shared game engine
+│   ├── state.js               # Game state management (meter, journal, flags)
+│   ├── scene.js               # Scene rendering and transitions
+│   ├── choices.js             # Choice logic, consequence calculation
+│   ├── journal.js             # Journal entry tracking
+│   └── endings.js             # End state calculation and rendering
+├── components/                # Shared UI components
+│   ├── MeterDisplay/          # The animated meter (trust, courage, etc.)
+│   ├── ChoiceCard/            # Choice buttons with subtle color hints
+│   ├── ScenePanel/            # Narrative text display
+│   ├── JournalView/           # Scrollable journal of past events
+│   └── EndScreen/             # Final summary and replay prompt
+├── games/                     # Individual games
+│   ├── tangled/
+│   │   ├── config.js          # Theme config (meter name, colors, labels)
+│   │   ├── scenarios/         # Scenario chain data files
+│   │   │   ├── broken-phone.js
+│   │   │   ├── group-project.js
+│   │   │   ├── the-secret.js
+│   │   │   └── the-test.js
+│   │   └── endings.js         # Game-specific end state text
+│   ├── invisible-thread/      # (future) Gratitude game
+│   ├── loud-silence/          # (future) Courage game
+│   └── ...
+├── assets/
+│   ├── illustrations/         # Scene illustrations
+│   ├── sounds/                # Ambient sounds, choice feedback
+│   └── fonts/
+└── styles/
+    ├── theme.css              # Shared CSS variables, base theme
+    └── animations.css         # Shared transition and animation styles
+```
+
+---
+
 ## Scenario data format
 
 Each scenario chain is a data file, not hardcoded logic. This makes it easy to add new stories without touching the engine.
